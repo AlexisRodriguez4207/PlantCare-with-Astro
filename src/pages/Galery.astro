@@ -1,0 +1,16 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Galeria from "../components/Galery.astro";
+
+interface Props {
+  title: string;
+}
+
+const { title } = Astro.props;
+---
+
+<Layout title="Plant Care Reminder">
+  <body class="px-4">
+    <Galeria />
+  </body>
+</Layout>
