@@ -10,8 +10,8 @@ const plants = await db.select().from(Plantas).all();
   {
     plants.map(({ id, name, description }) => (
       <div class="group relative bg-white mt-4 p-4 rounded-lg shadow-lg">
-        <img src={`${id}.jpg`} alt={name} class="w-full h-80 rounded-lg " />
-        <p class="text-fuchsia-600 text-center mb-2">{name}</p>
+        <img src={`${id}.webp`} alt={name} class="w-full h-80 rounded-lg " />
+        <p class="text-2xl font-medium text-center m-2">{name}</p>
         <p>{description}</p>
         <div class="text-center mt-4">
           <button

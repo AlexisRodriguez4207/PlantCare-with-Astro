@@ -1,0 +1,47 @@
+---
+import Facebook from "./icons/Facebook.astro";
+import Instagram from "./icons/Instagram.astro";
+import X from "./icons/X.astro";
+
+const TAGS = {
+  Instagram: {
+    name: "Instagram",
+    class: "text-white",
+    icon: Instagram,
+  },
+  Facebook: {
+    name: "Facebook",
+    class: "text-white",
+    icon: Facebook,
+  },
+  X: {
+    name: "X",
+    class: " text-white",
+    icon: X,
+  },
+};
+
+const SocialMedias = [
+  {
+    tags: [TAGS.Instagram, TAGS.Facebook, TAGS.X],
+  },
+];
+---
+
+{
+  SocialMedias.map(({ tags }) => (
+    <div>
+      <ul class="flex flex-row gap-2">
+        {tags.map((tag) => (
+          <li>
+            <span
+              class={`flex gap-x-2 rounded-full text-xs ${tag.class} py-1 px-2`}
+            >
+              <tag.icon class="size-4 flex flex-row" />
+            </span>
+          </li>
+        ))}
+      </ul>
+    </div>
+  ))
+}

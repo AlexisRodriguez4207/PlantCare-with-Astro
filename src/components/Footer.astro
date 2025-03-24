@@ -1,18 +1,29 @@
-<footer class="bg-black/95 backdrop-blur-lg w-full xl:w-[100%] mx-auto">
-  <div>
-    <span class="text-sm text-white/90 text-center">
-      2025
-      <a href="" class="hover:underline">AscenderDev</a>
+---
+import SocialMedia from "./SocialMedia.astro";
+---
 
-      <ul class="mt-3 text-sm font-medium text-white/90 sm:mt-0">
-        <li>
-          <img src="/Logo.png" alt="Logo Plant Care" class="rounded size-50" />
-          <a href="#" class="hover:underline me-4 md:me-6">Galeria</a>
-        </li>
-        <li>
-          <a href="#" class="hover:underline">Informacion y Cuidados</a>
-        </li>
-      </ul>
+<footer class="bg-black/95 backdrop-blur-lg w-full xl:w-[100%] mx-auto">
+  <div class="flex flex-row items-center">
+    <span class="text-sm text-white/90 text-center">
+      <img
+        src="/Logo.png"
+        alt="Logo Plant Care"
+        class="rounded size-50 w-20 h-20 mt-2"
+      />
     </span>
+    <ul
+      class="flex items-center justify-between w-full text-sm font-medium text-white/90 sm:mt-0"
+    >
+      <li class="list-none">
+        <a href="#" class="text-xl ml-3">Plant Care Reminder</a>
+      </li>
+      <div class="gap-x-4 flex flex-row items-center">
+        <a href="#" class="hover:underline">Inicio</a>
+        <a href="#" class="hover:underline">Galeria</a>
+        <div>
+          <SocialMedia />
+        </div>
+      </div>
+    </ul>
   </div>
 </footer>
