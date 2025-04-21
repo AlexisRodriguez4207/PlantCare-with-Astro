@@ -1,28 +1,32 @@
 ---
-import Footer from "../components/Footer.astro";
-import Galery from "../components/Galery.astro";
-
-import Header from "../components/Header.astro";
-
-interface Props {
-  title: string;
-}
-
-const { title } = Astro.props;
+// Supports weights 400-900
+import "@fontsource-variable/playfair-display";
+import Footer from "@components/Footer.astro";
+import Header from "@components/Header.astro";
 ---
 
 <!doctype html>
-<html lang="en">
+<html lang="es">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
+    <title>Plant Care Reminder</title>
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="generator" content={Astro.generator} />
-    <title>{title}</title>
+    <meta
+      name="description"
+      content="Pagina para conocer acerca de cuidados de las plantas "
+    />
+    <meta property="og:title" content="Plant Care Reminder" />
+    <meta
+      property="og:description"
+      content="Pagina para conocer acerca de cuidados de las plantas "
+    />
   </head>
-  <body
-    ><Header />
-    <slot />
+  <body>
+    <Header />
+    <main>
+      <slot />
+    </main>
   </body>
 </html>
 
@@ -32,12 +36,15 @@ const { title } = Astro.props;
   html {
     font-family: "Onest Variable", system-ui, sans-serif;
     scroll-behavior: smooth;
+    /* color-scheme: dark light; */
   }
   body {
-    background-image: radial-gradient(
-      circle 1224px at 10.6% 8.8%,
+    background: #ffffff;
+    background: linear-gradient(
+      90deg,
       rgba(255, 255, 255, 1) 0%,
-      rgba(153, 202, 251, 1) 100.2%
+      rgba(225, 237, 233, 1) 26%,
+      rgba(203, 225, 217, 1) 24%
     );
 
     display: flex;

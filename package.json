@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@astrojs/db": "^0.14.8",
+    "@fontsource-variable/playfair-display": "^5.2.5",
     "@tailwindcss/vite": "^4.0.10",
     "astro": "^5.4.2",
     "flowbite": "^3.1.2",

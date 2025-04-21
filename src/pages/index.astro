@@ -1,35 +1,30 @@
 ---
-import Carrousel from "../components/Carrousel.astro";
-import MainData from "../components/MainData.astro";
-import SectionContainer from "../components/SectionContainer.astro";
-import Layout from "../layouts/Layout.astro";
+import Carrousel from "@components/Hero.astro";
+import SectionContainer from "@components/SectionContainer.astro";
+import Layout from "@layouts/Layout.astro";
 ---
 
 <Layout title="Plant Care Reminder">
   <main class="px-4">
     <SectionContainer>
-      <div class="py-8 flex flex-row items-center justify-center">
-        <img src="/Logo.png" alt="Logo Plnat Care" class="rounded size-50" />
-        <h1 class="text-3xl font-bold ml-10">Plant Care Reminder</h1>
-      </div>
-
-      <p class="text-center text-3xl">
+      <p class="text-center text-3xl pt-10 font-bold">
         Floreciendo Juntos: Tu jardín, Tu amor.
       </p>
     </SectionContainer>
-    <SectionContainer class="pb-0">
+    <!-- <SectionContainer class="pb-0">
       <p class="bg-white w-full p-8 rounded-2xl shadow-xl text-center">
         Descubre la alegria de ver florecer tu jardín mientras exploras nuestras
         guías, y respuestas a tus preguntas sobre el fascinante mundo de las
         plantas. !Prepárate para embarcarte en un viaje verde donde cultivar y
         cuidar se convierten en todo un arte!
       </p>
-    </SectionContainer>
+    </SectionContainer> -->
     <SectionContainer>
       <Carrousel />
     </SectionContainer>
-    <SectionContainer class="pb-0">
+
+    <!-- <SectionContainer class="pb-0">
       <MainData />
-    </SectionContainer>
+    </SectionContainer> -->
   </main>
 </Layout>
